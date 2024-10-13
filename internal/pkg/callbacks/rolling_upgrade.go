@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"time"
 
-	argorolloutv1alpha1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	openshiftv1 "github.com/openshift/api/apps/v1"
 	"github.com/sirupsen/logrus"
 	"github.com/stakater/Reloader/internal/pkg/options"
 	"github.com/stakater/Reloader/pkg/kube"
@@ -16,6 +14,9 @@ import (
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	patchtypes "k8s.io/apimachinery/pkg/types"
+
+	argorolloutv1alpha1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	openshiftv1 "github.com/openshift/api/apps/v1"
 )
 
 // ItemsFunc is a generic function to return a specific resource array in given namespace

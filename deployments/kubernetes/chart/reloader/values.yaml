@@ -30,7 +30,7 @@ reloader:
   enableHA: false
   # Set to true if you have a pod security policy that enforces readOnlyRootFilesystem
   readOnlyRootFileSystem: false
-  triggerRolloutOnChange: false
+  triggerRolloutOnChange: true
   legacy:
     rbac: false
   matchLabels: {}
@@ -95,9 +95,9 @@ reloader:
       group: com.stakater.platform
       version: v1.0.121
     image:
-      name: reloader_dev
-      tag: latest
-      pullPolicy: Never
+      name: ghcr.io/stakater/reloader
+      tag: v1.0.121
+      pullPolicy: IfNotPresent
     # Support for extra environment variables.
     env:
       # Open supports Key value pair as environment variables.
