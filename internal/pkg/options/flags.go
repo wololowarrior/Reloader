@@ -40,4 +40,6 @@ var (
 	EnableHA = false
 	// Url to send a request to instead of triggering a reload
 	WebhookUrl = ""
+	// TriggerRolloutOnChange controls if a change will restart the pods or trigger a rollout strategy
+	TriggerRolloutOnChange = false
 )

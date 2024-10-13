@@ -265,6 +265,9 @@ spec:
           {{- if eq .Values.reloader.autoReloadAll true }}
           - "--auto-reload-all=true"
           {{- end -}}
+          {{- if eq .Values.reloader.triggerRolloutOnChange true }}
+          - "--trigger-Rollout-On-Change={{ .Values.reloader.triggerRolloutOnChange }}"
+          {{- end -}}
       {{- end }}
       {{- if .Values.reloader.deployment.resources }}
         resources:

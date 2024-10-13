@@ -54,6 +54,7 @@ func NewReloaderCommand() *cobra.Command {
 	cmd.PersistentFlags().StringVar(&options.ReloadOnDelete, "reload-on-delete", "false", "Add support to watch delete events")
 	cmd.PersistentFlags().BoolVar(&options.EnableHA, "enable-ha", false, "Adds support for running multiple replicas via leadership election")
 	cmd.PersistentFlags().BoolVar(&options.SyncAfterRestart, "sync-after-restart", false, "Sync add events after reloader restarts")
+	cmd.PersistentFlags().BoolVar(&options.TriggerRolloutOnChange, "trigger-Rollout-On-Change", false, "Trigger a rollout on configmap change")
 
 	return cmd
 }
